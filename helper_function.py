@@ -3,6 +3,8 @@ import matplotlib.image as mpimg
 import os
 import random
 import zipfile
+import tensorflow as tf
+import requests
      
 
 def plot_image(target_folder,target_class):
@@ -91,10 +93,7 @@ def unzip_data(zip_name):
 
      
 
-import tensorflow as tf
-     
 
-import requests
      
 
 def load_image_from_a_location(target_location,is_network=False,image_size=224,is_scaled=False):
@@ -138,8 +137,4 @@ def load_image_from_a_location(target_location,is_network=False,image_size=224,i
     return target_image/255
   else:
     return target_image
-
-     
-
-load_image_from_a_location(target_location='https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg',is_scaled=True)
      
